@@ -43,6 +43,11 @@ let
       system = "x86-64-solaris";
       sha256 = "05c12fmac4ha72k1ckl6i780rckd7jh4g5s5hiic7fjxnf1kx8d0";
     };
+    # riscv64-linux = {
+    #   version = "1.2.7";
+    #   system = "riscv64-linux";
+    #   sha256 = "a459570a0800635820b3e0419fe89444fc1b2f52ad1567fdbdb9693833520a25";
+    # };
   };
   cfg = options.${stdenv.hostPlatform.system};
 in
