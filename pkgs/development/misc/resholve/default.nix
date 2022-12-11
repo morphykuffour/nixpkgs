@@ -1,12 +1,12 @@
 { lib
+, stdenv
 , pkgsBuildHost
-, system
 , ...
 }:
 
 let
   pkgs = import ../../../.. {
-    inherit system;
+    inherit (stdenv.hostPlatform) system;
     # Allow python27 with known security issues only for resholve,
     # see issue #201859 for the reasoning
     # In resholve case this should not be a security issue,
@@ -22,6 +22,7 @@ rec {
   resholve = callPackage ./resholve.nix {
     inherit (source) rSrc version;
     inherit (deps.oil) oildev;
+    inherit (deps) configargparse;
     inherit resholve-utils;
   };
   # funcs to validate and phrase invocations of resholve

@@ -3704,6 +3704,12 @@
       fingerprint = "4749 0887 CF3B 85A1 6355  C671 78C7 DD40 DF23 FB16";
     }];
   };
+  DPDmancul = {
+    name = "Davide Peressoni";
+    email = "davide.peressoni@tuta.io";
+    matrix = "@dpd-:matrix.org";
+    githubId = 3186857;
+  };
   dpercy = {
     email = "dpercy@dpercy.dev";
     github = "dpercy";
@@ -9442,6 +9448,15 @@
     githubId = 249317;
     name = "montag451";
   };
+  montchr = {
+    name = "Chris Montgomery";
+    email = "chris@cdom.io";
+    github = "montchr";
+    githubId = 1757914;
+    keys = [{
+      fingerprint = "6460 4147 C434 F65E C306  A21F 135E EDD0 F719 34F3";
+    }];
+  };
   moosingin3space = {
     email = "moosingin3space@gmail.com";
     github = "moosingin3space";
@@ -10876,6 +10891,16 @@
     githubId = 101753;
     keys = [{
       fingerprint = "5D69 CF04 B7BC 2BC1 A567  9267 00BC F29B 3208 0700";
+    }];
+  };
+  phdcybersec = {
+    name = "Léo Lavaur";
+    email = "phdcybersec@pm.me";
+
+    github = "phdcybersec";
+    githubId = 82591009;
+    keys = [{
+      fingerprint = "7756 E88F 3C6A 47A5 C5F0  CDFB AB54 6777 F93E 20BF";
     }];
   };
   phfroidmont = {
@@ -14107,6 +14132,12 @@
     github = "tomsiewert";
     githubId = 8794235;
     name = "Tom Siewert";
+  };
+  tonyshkurenko = {
+    email = "support@twingate.com";
+    github = "tonyshkurenko";
+    githubId = 8597964;
+    name = "Anton Shkurenko";
   };
   toonn = {
     email = "nixpkgs@toonn.io";

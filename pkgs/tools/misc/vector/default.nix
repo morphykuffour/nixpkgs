@@ -32,7 +32,8 @@
 
 let
   pname = "vector";
-  version = "0.25.1";
+  pinData = lib.importJSON ./pin.json;
+  version = pinData.version;
 in
 rustPlatform.buildRustPackage {
   inherit pname version;
@@ -41,10 +42,10 @@ rustPlatform.buildRustPackage {
     owner = "vectordotdev";
     repo = pname;
     rev = "v${version}";
-    hash = "sha256-7iYiSO966o0M9M0ijGCpuRVRgus+tURLBN9S5lPDRb8=";
+    sha256 = pinData.sha256;
   };
 
-  cargoHash = "sha256-EqK6r/pFFKmnpPPUhqdC3bztYQZ+2w7u7V8Rj+9oWII=";
+  cargoSha256 = pinData.cargoSha256;
   nativeBuildInputs = [ pkg-config cmake perl ];
   buildInputs = [ oniguruma openssl protobuf rdkafka zstd ]
     ++ lib.optionals stdenv.isDarwin [ Security libiconv coreutils CoreServices ];
